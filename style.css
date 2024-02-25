@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+ul li,
+button,
+span {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+#main {
+  width: 100%;
+  height: 100%;
+  background: #ededed;
+}
+
+/* Here is the Grid Container Style Code  */
+#grid_container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  padding: 2vw;
+  position: relative;
+  /*   gap:1vw; */
+  grid-template-columns: 50% 44% 6%;
+  grid-template-rows: 5% 20% 65% 10%;
+}
+/* .elem {
+  border: 2px solid black;
+} */
+.header {
+  grid-row: 1/2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 3vw;
+}
+.logo {
+  width: 20px;
+  height: 20px;
+  background: black;
+  rotate: 45deg;
+}
+.header h5 {
+  font-size: clamp(16px, 1vw, 26px);
+  font-weight: 500;
+}
+.menu {
+  grid-row: 2/3;
+  text-align: right;
+  padding-right: 3vw;
+  display: flex;
+  align-items: end;
+  justify-content: end;
+}
+.menu ul {
+  list-style: none;
+}
+.menu ul li {
+  font-size: clamp(14px, 2vw, 1.1vw);
+}
+.heading {
+  position: relative;
+  grid-row: 3/4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.heading i {
+  position: absolute;
+  right: -2.5vw;
+  top: 32%;
+  z-index: 2;
+  color: white;
+  background: #ff4d01;
+  border-radius: 50%;
+  padding: 1vw;
+  font-size: 2.5vw;
+}
+.heading h1 {
+  font-size: clamp(4vw, 7.5vw, 9vw);
+  font-weight: 400;
+  line-height: 7vw;
+  text-transform: uppercase;
+  padding-right: 3vw;
+  width: 100%;
+}
+.heading h1:nth-child(2n) {
+  text-align: right;
+}
+.heading h1:nth-child(2) {
+  margin-right: 10vw;
+}
+.some-content {
+  grid-row: 4/5;
+  display: flex;
+  align-items: end;
+}
+.some-content p {
+  font-size: clamp(14px, 2vw, 1.1vw);
+}
+.video {
+  grid-row: 1/5;
+  position: relative;
+}
+.video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.search {
+  grid-row: 1/5;
+  display: flex;
+  justify-content: end;
+}
+.search i {
+  transform: scaleX(-1);
+  font-size: 1.5vw;
+  font-weight: bold;
+}
+@media (max-width: 600px) {
+  .search {
+    display: none;
+  }
+  #grid_container {
+    padding: 2vw;
+    gap: 1vw;
+    grid-template-columns: 100%;
+    grid-template-rows: 5% 15% 30% 10% 40%;
+  }
+  .header {
+    grid-row: 1/2;
+    padding: 0;
+  }
+  .menu {
+    grid-row: 2/2;
+    padding: 0;
+  }
+  .menu ul li {
+    font-size: 2.5vw;
+    line-height: 22px;
+  }
+  .heading {
+    grid-row: 3/4;
+  }
+  .heading h1 {
+    font-size: 13.5vw;
+    line-height: 13vw;
+    padding-right: 20vw;
+  }
+  .heading i {
+    display: none;
+  }
+  .some-content {
+    grid-row: 4/4;
+    align-items: center;
+  }
+  .some-content p {
+    font-size: 2.5vw;
+  }
+  .video {
+    grid-row: 5/5;
+  }
+}
